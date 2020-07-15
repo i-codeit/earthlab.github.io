@@ -8,7 +8,7 @@ class-lesson: ['text-file-formats']
 permalink: /courses/intro-to-earth-data-science/file-formats/use-text-files/use-tabular-data/
 nav-title: "Use Tabular Data"
 dateCreated: 2020-06-20
-modified: 2020-07-01
+modified: 2020-07-15
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 2
@@ -16,7 +16,7 @@ sidebar:
   nav:
 author_profile: false
 comments: true
-order: 2
+order: 3
 topics:
   file-formats: ['csv']
 ---
@@ -476,14 +476,14 @@ miami_temp
     <tr>
       <th>3</th>
       <td>194812</td>
-      <td>84.5</td>
+      <td>84.6</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
       <td>194912</td>
-      <td>83.9</td>
+      <td>84.0</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -511,21 +511,21 @@ miami_temp
     <tr>
       <th>72</th>
       <td>201712</td>
-      <td>85.1</td>
+      <td>85.0</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>73</th>
       <td>201812</td>
-      <td>85.0</td>
+      <td>84.9</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>74</th>
       <td>201912</td>
-      <td>85.6</td>
+      <td>85.3</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -612,27 +612,27 @@ miami_temp.head()
     <tr>
       <th>0</th>
       <td>194812</td>
-      <td>84.5</td>
+      <td>84.6</td>
     </tr>
     <tr>
       <th>1</th>
       <td>194912</td>
-      <td>83.9</td>
+      <td>84.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>195012</td>
-      <td>83.2</td>
+      <td>83.3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>195112</td>
-      <td>83.6</td>
+      <td>83.7</td>
     </tr>
     <tr>
       <th>4</th>
       <td>195212</td>
-      <td>84.2</td>
+      <td>84.3</td>
     </tr>
   </tbody>
 </table>
