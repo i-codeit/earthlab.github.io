@@ -16,6 +16,8 @@ module-type: 'class'
 class-order: 2
 course: "earth-analytics-bootcamp"
 week: 6
+estimated-time: "2-3 hours"
+difficulty: "beginner"
 sidebar:
   nav:
 author_profile: false
