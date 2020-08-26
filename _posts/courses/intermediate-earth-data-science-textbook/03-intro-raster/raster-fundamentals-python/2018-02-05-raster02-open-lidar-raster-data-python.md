@@ -4,7 +4,7 @@ title: "Open, Plot and Explore Raster Data with Python"
 excerpt: "Raster data are gridded data composed of pixels that store values, such as an image or elevation data file. Learn how to open, plot, and explore raster files in Python."
 authors: ['Leah Wasser', 'Chris Holdgraf', 'Martha Morrissey']
 dateCreated: 2018-02-06
-modified: 2020-08-22
+modified: 2020-08-26
 category: [courses]
 class-lesson: ['intro-raster-python-tb']
 permalink: /courses/use-data-open-source-python/intro-raster-data-python/fundamentals-raster-data/open-lidar-raster-python/
@@ -106,18 +106,18 @@ import earthpy.plot as ep
 sns.set(font_scale=1.5, style="white")
 ```
 
+{:.output}
+    /opt/conda/lib/python3.8/site-packages/rasterio/plot.py:260: SyntaxWarning: "is" with a literal. Did you mean "=="?
+      if len(arr.shape) is 2:
+
+
+
 {:.input}
 ```python
 # Get data and set working directory
 et.data.get_data("colorado-flood")
 os.chdir(os.path.join(et.io.HOME, 'earth-analytics', 'data'))
 ```
-
-{:.output}
-    Downloading from https://ndownloader.figshare.com/files/16371473
-    Extracted output to /root/earth-analytics/data/colorado-flood/.
-
-
 
 Below, you define the path to a lidar derived digital elevation model (DEM)
 that was created using NEON (the National Ecological Observatory Network) data. 
@@ -210,7 +210,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_10_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_10_0.png" alt = "Histogram for your lidar DTM. Notice the number of values that are below 0. This suggests that there may be no data values in the data.">
+<figcaption>Histogram for your lidar DTM. Notice the number of values that are below 0. This suggests that there may be no data values in the data.</figcaption>
 
 </figure>
 
@@ -267,7 +268,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_15_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_15_0.png" alt = "Histogram for your lidar DTM with no data values removed.">
+<figcaption>Histogram for your lidar DTM with no data values removed.</figcaption>
 
 </figure>
 
@@ -291,7 +293,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_17_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_17_0.png" alt = "Plot of lidar digital elevation model (DEM).">
+<figcaption>Plot of lidar digital elevation model (DEM).</figcaption>
 
 </figure>
 
@@ -634,7 +637,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_38_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_38_0.png" alt = "Plot of the site boundary using Geopandas.">
+<figcaption>Plot of the site boundary using Geopandas.</figcaption>
 
 </figure>
 
@@ -662,7 +666,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_40_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_40_0.png" alt = "When you try to plot a raster and vector together with out a plotting extent defined for the raster layer, you often get a plot like this. Notice that the plot looks blank and does not show the raster layer that you know plotted ok above.">
+<figcaption>When you try to plot a raster and vector together with out a plotting extent defined for the raster layer, you often get a plot like this. Notice that the plot looks blank and does not show the raster layer that you know plotted ok above.</figcaption>
 
 </figure>
 
@@ -716,7 +721,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_43_0.png">
+<img src = "{{ site.url }}/images/courses/intermediate-earth-data-science-textbook/03-intro-raster/raster-fundamentals-python/2018-02-05-raster02-open-lidar-raster-data-python/2018-02-05-raster02-open-lidar-raster-data-python_43_0.png" alt = "Plot of a raster overlayed with the site boundary. The plotting extent, when defined correctly will allow you to overlay raster and vector data together.">
+<figcaption>Plot of a raster overlayed with the site boundary. The plotting extent, when defined correctly will allow you to overlay raster and vector data together.</figcaption>
 
 </figure>
 
