@@ -8,7 +8,7 @@ class-lesson: ['jupyter-notebook']
 permalink: /courses/intro-to-earth-data-science/open-reproducible-science/jupyter-python/manage-jupyter-notebook-files/
 nav-title: "Manage Jupyter Notebooks"
 dateCreated: 2019-07-15
-modified: 2019-09-23
+modified: 2020-09-03
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 1
@@ -19,6 +19,8 @@ comments: true
 order: 5
 topics:
   reproducible-science-and-programming: ['jupyter-notebook']
+redirect_from: 
+  - "/courses/earth-analytics-bootcamp/git-github-version-control/manage-jupyter-notebooks/"
 ---
 
 {% include toc title="On This Page" icon="file-text" %}
