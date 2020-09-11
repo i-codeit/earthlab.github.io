@@ -8,7 +8,7 @@ class-lesson: ['text-file-formats']
 permalink: /courses/intro-to-earth-data-science/file-formats/use-text-files/use-tabular-data/
 nav-title: "Use Tabular Data"
 dateCreated: 2020-06-20
-modified: 2020-09-03
+modified: 2020-09-11
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 2
@@ -336,7 +336,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_9_1.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_9_1.png" alt = "Line plot of precipitation (mm) for one year.">
+<figcaption>Line plot of precipitation (mm) for one year.</figcaption>
 
 </figure>
 
@@ -346,7 +347,7 @@ plt.show()
 <div class="notice--warning alert alert-info" markdown="1">
 
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1
 
 * Use Python to determine the `type` of data stored in `avg_monthly_precip`
 
@@ -355,9 +356,21 @@ HINT: you learned how to determine the type of an object in the variables lesson
 </div>
 
 
+
+{:.output}
+{:.execute_result}
+
+
+
+    pandas.core.frame.DataFrame
+
+
+
+
+
 <div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2
 
 In most programming languages, you can customize the options for how a function 
 runs by using parameters. Examples of parameters in the plot above include: 
@@ -392,11 +405,26 @@ ax.set(xlabel='Month',
 plt.show()
 ```
 
+The plot below is an example of what your final plot should look like. 
 </div>
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_13_0.png" alt = "Bar plot of precipitation (mm) for one year.">
+<figcaption>Bar plot of precipitation (mm) for one year.</figcaption>
+
+</figure>
+
+
+
 
 ## Cleaning Tabular Text Files So You Can Open Them in Python
 
-## Missing Data Values & Headers in Text Files
+### Missing Data Values & Headers in Text Files
 
 Not all text files are as simple as the example above. Many text files have 
 several lines of header text above the data that provide you with useful information
@@ -422,7 +450,7 @@ using below.</a>
 {:.input}
 ```python
 # Open temperature data for Miami, Florida
-miami_temp_url = "https://www.ncdc.noaa.gov/cag/city/time-series/USW00012839-tmax-12-12-1895-2020.csv" 
+miami_temp_url = "https://www.ncdc.noaa.gov/cag/city/time-series/USW00012839-tmax-12-12-1895-2020.csv"
 
 miami_temp = pd.read_csv(miami_temp_url)
 miami_temp
@@ -510,14 +538,14 @@ miami_temp
     <tr>
       <th>71</th>
       <td>201612</td>
-      <td>84.5</td>
+      <td>84.6</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>72</th>
       <td>201712</td>
-      <td>85.2</td>
+      <td>85.9</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -531,7 +559,7 @@ miami_temp
     <tr>
       <th>74</th>
       <td>201912</td>
-      <td>85.6</td>
+      <td>85.5</td>
       <td>NaN</td>
       <td>NaN</td>
     </tr>
@@ -580,8 +608,8 @@ in Pandas in the <a href="https://www.earthdatascience.org/courses/use-data-open
 ```python
 # Open the Miami data skipping the first 3 rows and setting no data values
 miami_temp = pd.read_csv(miami_temp_url,
-                        skiprows=3,
-                        na_values=-99)
+                         skiprows=3,
+                         na_values=-99)
 
 # View the first 5 rows of the data
 miami_temp.head()
@@ -628,12 +656,12 @@ miami_temp.head()
     <tr>
       <th>2</th>
       <td>195012</td>
-      <td>82.4</td>
+      <td>82.3</td>
     </tr>
     <tr>
       <th>3</th>
       <td>195112</td>
-      <td>82.8</td>
+      <td>82.7</td>
     </tr>
     <tr>
       <th>4</th>
@@ -650,28 +678,57 @@ miami_temp.head()
 
 <div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 3
 
 Now that you have imported temperature data for Miami, plot the 
 data using the code example above!! In your plot code, set `Date` as your 
 `x-axis` value and `Value` column as your `y-axis` value.
 
+The plot below is an example of what your final plot should look like. 
 </div>
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_19_0.png" alt = "Line plot of temperature (F) for Miami, Florida.">
+<figcaption>Line plot of temperature (F) for Miami, Florida.</figcaption>
+
+</figure>
+
+
+
 
 <div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 4
 
 Use the link below to open and plot temperature data for Seattle, Washington. 
 
-https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv 
+<a href="https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv" target="_blank">https://www.ncdc.noaa.gov/cag/city/time-series/USW00013895-tmax-1-5-1895-2020.csv</a>
 
 </div>
 
 
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_21_0.png" alt = "Line plot of temperature (F) for Montgomery, Alabama.">
+<figcaption>Line plot of temperature (F) for Montgomery, Alabama.</figcaption>
+
+</figure>
+
+
+
+
 <div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge -- OPTIONAL
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 5 -- OPTIONAL
 
 Copy the code below into your code. Run the code. 
 It should download and open a new dataset that has CO2 emissions for a field site
@@ -700,6 +757,21 @@ import the data. HINT: remember when you use `skiprows` to consider 0-based inde
 x-axis and `"value"` on the y-axis.
 
 </div>
+
+
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/04-text-file-formats-eds/2019-08-29-text-file-formats-03-tabular-data/2019-08-29-text-file-formats-03-tabular-data_24_0.png" alt = "Line plot of temperature (F) for Barrow, Alaska.">
+<figcaption>Line plot of temperature (F) for Barrow, Alaska.</figcaption>
+
+</figure>
+
+
 
 
 <div class="notice--info alert alert-info" markdown="1">

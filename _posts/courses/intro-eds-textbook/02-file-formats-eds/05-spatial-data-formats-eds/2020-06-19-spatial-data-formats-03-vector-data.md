@@ -8,7 +8,7 @@ class-lesson: ['spatial-data-formats']
 permalink: /courses/intro-to-earth-data-science/file-formats/use-spatial-data/use-vector-data/
 nav-title: "Use Vector Data"
 dateCreated: 2020-06-20
-modified: 2020-09-03
+modified: 2020-09-11
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 2
@@ -272,7 +272,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_10_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_10_0.png" alt = "Global coastline boundaries.">
+<figcaption>Global coastline boundaries.</figcaption>
 
 </figure>
 
@@ -537,13 +538,36 @@ cities.head()
 
 
 
-<div class="notice--warning" markdown="1">
+<div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge:  What Geometry Type Are Your Data
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 1:  What Geometry Type Are Your Data
 
 Check the geometry type of the `cities` object that you opened above in your code. 
 
 </div>
+
+
+
+{:.output}
+{:.execute_result}
+
+
+
+    0       Point
+    1       Point
+    2       Point
+    3       Point
+    4       Point
+            ...  
+    1244    Point
+    1245    Point
+    1246    Point
+    1247    Point
+    1248    Point
+    Length: 1249, dtype: object
+
+
+
 
 
 ## Creating Maps Using Multiple Shapefiles
@@ -576,7 +600,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_20_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_21_0.png" alt = "Global coastline boundaries.">
+<figcaption>Global coastline boundaries.</figcaption>
 
 </figure>
 
@@ -605,7 +630,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_22_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_23_0.png" alt = "Global coastline boundaries and major cities plotted together.">
+<figcaption>Global coastline boundaries and major cities plotted together.</figcaption>
 
 </figure>
 
@@ -628,7 +654,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_24_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_25_0.png" alt = "Global coastline boundaries plotted in one plot, and another plot with global cities.">
+<figcaption>Global coastline boundaries plotted in one plot, and another plot with global cities.</figcaption>
 
 </figure>
 
@@ -640,16 +667,17 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_24_1.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_25_1.png" alt = "Global coastline boundaries plotted in one plot, and another plot with global cities.">
+<figcaption>Global coastline boundaries plotted in one plot, and another plot with global cities.</figcaption>
 
 </figure>
 
 
 
 
-<div class="notice--warning" markdown="1">
+<div class="notice--warning alert alert-info" markdown="1">
 
-## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge: Create a Global Map
+## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge 2: Create a Global Map
 
 The code below will download one additional file for you that contains global country 
 boundaries. Your goal is to create a map that contains 3 layers:
@@ -688,6 +716,26 @@ Finally, add a title to your map using
 
 
 
+{:.output}
+    Downloading from https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip
+    Extracted output to /root/earth-analytics/data/earthpy-downloads/ne_50m_admin_0_countries
+
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_27_1.png" alt = "Global political boundaries with major cities.">
+<figcaption>Global political boundaries with major cities.</figcaption>
+
+</figure>
+
+
+
+
+
 <div class="notice--success alert alert-info" markdown="1">
 <i class="fa fa-star"></i> **Data Tip:** There are many options to customize plots in Python. Below are 
 a few lessons that cover some of this information!
@@ -696,13 +744,6 @@ a few lessons that cover some of this information!
 
 * <a href="https://geopandas.org/gallery/plotting_with_geoplot.html" target="_blank">Geopandas plotting tutorial</a>
 </div>
-
-
-{:.output}
-    Downloading from https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/cultural/ne_50m_admin_0_countries.zip
-    Extracted output to /root/earth-analytics/data/earthpy-downloads/ne_50m_admin_0_countries
-
-
 
 
 ## Spatial Data Attributes
@@ -961,13 +1002,13 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 f, ax1 = plt.subplots(figsize=(10, 6))
 
 divider = make_axes_locatable(ax1)
-cax = divider.append_axes("right", 
-                          size="5%", 
+cax = divider.append_axes("right",
+                          size="5%",
                           pad=0.1)
 
 countries.plot(column='POP_EST',
                legend=True,
-               ax=ax1, 
+               ax=ax1,
                cax=cax)
 plt.show()
 ```
@@ -977,7 +1018,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_32_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_33_0.png" alt = "Countries symbolized on a color gradient by how large their population is.">
+<figcaption>Countries symbolized on a color gradient by how large their population is.</figcaption>
 
 </figure>
 
@@ -995,6 +1037,31 @@ HINT: checkout <a href="https://geopandas.org/mapping.html" target="_blank">this
 
 </div>
 
+
+{:.output}
+{:.execute_result}
+
+
+
+    <AxesSubplot:>
+
+
+
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_35_1.png" alt = "Global cities plotted without boundaries.">
+<figcaption>Global cities plotted without boundaries.</figcaption>
+
+</figure>
+
+
+
+
 <div class="notice--warning alert alert-info" markdown="1">
 
 ## <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Challenge: Plot Cities Data Using Quantiles -- Categorical Plot
@@ -1007,6 +1074,20 @@ Set the following parameters:
 * `scheme="quantiles`
 
 </div>
+
+
+
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_37_0.png" alt = "Global cities symoblized on a color gradient by population.">
+<figcaption>Global cities symoblized on a color gradient by population.</figcaption>
+
+</figure>
+
+
 
 
 ## Optional: Geoprocessing Vector Data Geoprocessing in Python: Clip Data
@@ -1044,11 +1125,12 @@ Below you do the following:
 
 {:.input}
 ```python
-# Subset the countries data to just a single 
-united_states_boundary = countries.loc[countries['SOVEREIGNT'] == 'United States of America']
+# Subset the countries data to just a single
+united_states_boundary = countries.loc[countries['SOVEREIGNT']
+                                       == 'United States of America']
 
 # Notice in the plot below, that only the boundary for the USA is in the new variable
-f, ax = plt.subplots(figsize=(10,6))
+f, ax = plt.subplots(figsize=(10, 6))
 united_states_boundary.plot(ax=ax)
 plt.show()
 ```
@@ -1058,7 +1140,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_36_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_39_0.png" alt = "Plot of the United States using Geopandas.">
+<figcaption>Plot of the United States using Geopandas.</figcaption>
 
 </figure>
 
@@ -1083,7 +1166,8 @@ plt.show()
 
 <figure>
 
-<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_37_0.png">
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_40_0.png" alt = "Plot of cities in the United States using Geopandas.">
+<figcaption>Plot of cities in the United States using Geopandas.</figcaption>
 
 </figure>
 
@@ -1112,9 +1196,17 @@ included in the output dataset.
 
 </div>
 
-{:.input}
-```python
-# Add your code here to complete the challenge 
 
 
-```
+{:.output}
+{:.display_data}
+
+<figure>
+
+<img src = "{{ site.url }}/images/courses/intro-eds-textbook/02-file-formats-eds/05-spatial-data-formats-eds/2020-06-19-spatial-data-formats-03-vector-data/2020-06-19-spatial-data-formats-03-vector-data_43_0.png" alt = "Plot of cities clipped to the Canadian border.">
+<figcaption>Plot of cities clipped to the Canadian border.</figcaption>
+
+</figure>
+
+
+
