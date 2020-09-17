@@ -8,7 +8,7 @@ class-lesson: ['version-control-git-github']
 permalink: /courses/intro-to-earth-data-science/git-github/version-control/
 nav-title: "About Version Control"
 dateCreated: 2019-09-06
-modified: 2020-09-08
+modified: 2020-09-17
 module-title: 'Git/GitHub For Version Control'
 module-nav-title: 'Git/GitHub For Version Control'
 module-description: 'A version control system allows you to track and manage changes to your files. Learn how to get started with version control using git and GitHub.com.'
@@ -118,7 +118,7 @@ up with your latest version.
 
 Once you think of changes as separate from the document itself, you can then think about “playing back” different sets of changes onto the base document. You can then retrieve, or revert to, different versions of the document.
 
-Collaboration with version control allows to users to make independent changes to the same document.
+Collaboration with version control allows users to make independent changes to the same document.
 
 <figure>
    <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-versions.png">
@@ -127,7 +127,7 @@ Collaboration with version control allows to users to make independent changes t
    </figcaption>
 </figure>
 
-If there aren’t conflicts between the users’ changes (a conflict is an area where both users modified the same part of the same document in different ways), you can review two sets of changes on the same base document. If there are conflicts, they can resolved by choosing which change you want to keep.
+If there aren’t conflicts between the users’ changes (a conflict is an area where both users modified the same part of the same document in different ways), you can review two sets of changes on the same base document. If there are conflicts, they can be resolved by choosing which change you want to keep.
 
 <figure>
    <a href="{{ site.url }}/images/earth-analytics/git-version-control/git-merge.png">

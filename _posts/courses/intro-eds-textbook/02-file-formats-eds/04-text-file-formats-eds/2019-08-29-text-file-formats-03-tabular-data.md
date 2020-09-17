@@ -8,7 +8,7 @@ class-lesson: ['text-file-formats']
 permalink: /courses/intro-to-earth-data-science/file-formats/use-text-files/use-tabular-data/
 nav-title: "Use Tabular Data"
 dateCreated: 2020-06-20
-modified: 2020-09-11
+modified: 2020-09-17
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 2
@@ -94,7 +94,7 @@ A delimiter refers to the character that defines the boundary for different sets
 In a text file, the delimiter defines the boundary between columns. A line break (a return) defines 
 each row. 
 
-Below you will find an example of a space delimited text file. In the example below, each column of data 
+Below you will find an example of a comma delimited text file. In the example below, each column of data 
 is separated by a comma `,`. The data also include a header row which is also separated by commas.
 
 ```
@@ -152,8 +152,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 ```
 
-If you have a url that directly links directly to a file online, you can 
-open it directly using pandas `.read_csv()`. Have a look at the data below - 
+If you have a url that links directly to a file online, you can 
+open it using pandas `.read_csv()`. Have a look at the data below - 
 and notice that is has:
 
 * 3 columns: months, precip and seasons
@@ -749,7 +749,7 @@ urllib.request.urlretrieve(url=greenhouse_gas_url,
 ```
 
 Once you have downloaded the data
-1. Read the data in using pandas `read_file()`
+1. Read the data in using pandas `read_csv()`
 2. The data has some additional rows of information stored as metadata. You will
 need to use the `skiprows=` parameter to skip those metadata rows and properly 
 import the data. HINT: remember when you use `skiprows` to consider 0-based indexing.
