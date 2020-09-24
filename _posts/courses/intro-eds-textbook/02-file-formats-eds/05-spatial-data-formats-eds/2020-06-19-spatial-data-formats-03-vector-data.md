@@ -8,7 +8,7 @@ class-lesson: ['spatial-data-formats']
 permalink: /courses/intro-to-earth-data-science/file-formats/use-spatial-data/use-vector-data/
 nav-title: "Use Vector Data"
 dateCreated: 2020-06-20
-modified: 2020-09-11
+modified: 2020-09-24
 module-type: 'class'
 course: "intro-to-earth-data-science-textbook"
 week: 2
@@ -115,6 +115,7 @@ It stores spatial data in a tabular, `dataframe` format.
 ```python
 # Import packages
 import os
+
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import earthpy as et
