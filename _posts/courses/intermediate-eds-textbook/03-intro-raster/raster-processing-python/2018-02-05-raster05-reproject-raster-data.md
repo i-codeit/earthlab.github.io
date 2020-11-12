@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "Reproject Raster Data Python"
+title: "Reproject Raster Data Using Rioxarray in Open Source Python"
 excerpt: "Sometimes you will work with multiple rasters that are not in the same projections, and thus, need to reproject the rasters, so they are in the same coordinate reference system. Learn how to reproject raster data in Python using Rasterio."
 authors: ['Leah Wasser', 'Nathan Korinek', 'Martha Morrissey']
 dateCreated: 2018-02-05
-modified: 2020-11-09
+modified: 2020-11-12
 category: ['courses']
 class-lesson: ['raster-processing-python']
 permalink: /courses/use-data-open-source-python/intro-raster-data-python/raster-data-processing/reproject-raster/
@@ -30,15 +30,15 @@ redirect_from:
 
 ## <i class="fa fa-graduation-cap" aria-hidden="true"></i> Learning objectives
 
-* Reproject a raster in **Python** using **rasterio**.
+* Reproject a raster in **Python** using **rioxarray**.
 
 </div>
 
 
-## Reprojecting 
+## Reproject Raster Data Using Rioxarray
 
 Sometimes you your raster data are not all in the same Coordinate Reference Systems (CRS).
-When this happens, you may need to reproject your data from it's current CRS to match the 
+When this happens, you may need to reproject your data from its current CRS to match the 
 CRS of other data that you are using. 
 
 <i class="fa fa-star"></i> **Data Tip:** Proceed with caution when you are reprojecting raster data. Often it's best to 
